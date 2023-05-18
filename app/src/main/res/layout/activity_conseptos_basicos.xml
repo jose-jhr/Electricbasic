@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".basicos.ConceptosBasicos">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Conceptos Básicos"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/txtBasicos"
+        >
+    </TextView>
+
+
+
+    <com.ingenieriiajhr.gridview.ExpandableHeightGridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="1"
+        android:id="@+id/gridViewSelect"
+        android:isScrollContainer="false"
+        android:layout_below="@id/txtBasicos"
+        android:layout_marginTop="5dp"
+        >
+    </com.ingenieriiajhr.gridview.ExpandableHeightGridView>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@mipmap/conseptos"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/gridViewSelect"
+        android:id="@+id/imgLogo"
+        >
+    </ImageView>
+
+
+</RelativeLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calculadora.PotenciaConversion">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculo de potencia"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:background="@mipmap/potencia"
+            android:layout_gravity="center"
+            >
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="se calculara la variable vacia"
+            android:textAlignment="center"
+            android:textColor="@color/color_base"
+            android:textSize="15sp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P1 = "
+                android:textSize="@dimen/size_text"
+                >
+            </TextView>
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned|numberDecimal"
+                android:id="@+id/edtHp"
+                android:hint="HP"
+                android:textAlignment="center"
+                >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* 745.7"
+                android:textSize="@dimen/size_text"
+                >
+            </TextView>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Calcular"
+                android:background="@drawable/rounded_button_calculadora"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/azul"
+                android:layout_marginStart="10dp"
+                android:id="@+id/btnCalpot"
+                >
+            </Button>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P2 = "
+                android:textSize="@dimen/size_text"
+                >
+            </TextView>
+
+            <EditText
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned|numberDecimal"
+                android:id="@+id/edtVoltaje"
+                android:hint="Voltaje"
+                android:textAlignment="center"
+                >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                >
+            </TextView>
+
+            <EditText
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned|numberDecimal"
+                android:id="@+id/edtCorriente"
+                android:hint="Corriente"
+                android:textAlignment="center"
+                >
+            </EditText>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Calcular"
+                android:background="@drawable/rounded_button_calculadora"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/azul"
+                android:layout_marginStart="10dp"
+                android:id="@+id/btnCalpot2"
+                >
+            </Button>
+
+
+        </LinearLayout>
+
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginTop="20dp"
+           android:id="@+id/txtResult1"
+           android:text="Resultado1: "
+           android:textSize="@dimen/size_text"
+           >
+       </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:id="@+id/txtResult2"
+            android:text="Resultado2: "
+            android:textSize="@dimen/size_text"
+            >
+        </TextView>
+
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

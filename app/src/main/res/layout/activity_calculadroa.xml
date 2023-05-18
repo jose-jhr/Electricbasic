@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".calculadora.Calculadroa">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_calculadora"
+        android:text="LEY DE OHM"
+        android:textColor="@color/white"
+        android:id="@+id/btnOhm"
+        >
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_calculadora"
+        android:text="CORRIENTE NOMINAL"
+        android:textColor="@color/white"
+        android:id="@+id/btnCurrentNominal"
+        >
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_calculadora"
+        android:text="CORRIENTE TRIFÁSICA"
+        android:textColor="@color/white"
+        android:id="@+id/btnCurrentTri"
+        >
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_calculadora"
+        android:text="CONVERSIÓN DE POTENCIA"
+        android:textColor="@color/white"
+        android:id="@+id/btnPotencia"
+        >
+    </Button>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        >
+
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragmentContainer"
+            >
+        </androidx.fragment.app.FragmentContainerView>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

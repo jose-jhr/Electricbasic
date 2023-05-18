@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calculadora.CurrentNominal">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Corriente Nominal"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:background="@mipmap/corrientenominalc"
+            android:layout_gravity="center"
+            >
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="se calculara la variable vacia"
+            android:textAlignment="center"
+            android:textColor="@color/color_base"
+            android:textSize="15sp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I: "
+                android:textSize="@dimen/size_text"
+                >
+            </TextView>
+
+            <EditText
+                android:layout_width="@dimen/width_view"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned|numberDecimal"
+                android:id="@+id/edtCorriente"
+                >
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P: "
+                android:textSize="@dimen/size_text"
+                >
+            </TextView>
+
+            <EditText
+                android:layout_width="@dimen/width_view"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned|numberDecimal"
+                android:id="@+id/edtPotencia"
+                >
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V: "
+                android:textSize="@dimen/size_text"
+                >
+            </TextView>
+
+            <EditText
+                android:layout_width="@dimen/width_view"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned|numberDecimal"
+                android:id="@+id/edtVoltaje"
+                >
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COSΘ: "
+                android:textSize="@dimen/size_text"
+                >
+            </TextView>
+
+            <EditText
+                android:layout_width="@dimen/width_view"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned|numberDecimal"
+                android:id="@+id/edtFactorPotencia"
+                >
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultado: "
+                android:id="@+id/txtResult"
+                android:textSize="20sp"
+                >
+            </TextView>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Calcular"
+            android:background="@drawable/rounded_button_calculadora"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/azul"
+            android:layout_marginTop="5dp"
+            android:id="@+id/btnCalcular"
+            >
+        </Button>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
