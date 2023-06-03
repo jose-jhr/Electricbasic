@@ -18,12 +18,9 @@ import com.ingenieriiajhr.electric.R;
 
 public class PotenciaConversion extends Fragment {
 
-
     public PotenciaConversion() {
         // Required empty public constructor
     }
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,7 +38,7 @@ public class PotenciaConversion extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root =  inflater.inflate(R.layout.fragment_potencia_conversion, container, false);
+        View root = inflater.inflate(R.layout.fragment_potencia_conversion, container, false);
 
         edtHp = root.findViewById(R.id.edtHp);
         edtVoltaje = root.findViewById(R.id.edtVoltaje);
@@ -52,32 +49,33 @@ public class PotenciaConversion extends Fragment {
 
         calculate1 = root.findViewById(R.id.btnCalpot);
         calculate2 = root.findViewById(R.id.btnCalpot2);
+        
 
-        calculate1.setOnClickListener(click->{
-            if (!TextUtils.isEmpty(edtHp.getText().toString())){
-                txtResult1.setText("P1: "+ Float.parseFloat(edtHp.getText().toString()) * 745.7f);
-            }else{
+        calculate1.setOnClickListener(click -> {
+            if (!TextUtils.isEmpty(edtHp.getText().toString())) {
+                txtResult1.setText("P1: " + Float.parseFloat(edtHp.getText().toString()) * 745.7f);
+            } else {
                 Toast.makeText(getActivity().getApplicationContext(), "Requiere HP", Toast.LENGTH_SHORT).show();
             }
         });
 
-        calculate2.setOnClickListener(click2->{
-            if (!TextUtils.isEmpty(edtCorriente.getText().toString())){
-                if (!TextUtils.isEmpty(edtVoltaje.getText().toString())){
-                    txtResult2.setText("P2: "+ stof(edtCorriente.getText().toString()) * stof(edtVoltaje.getText().toString()));
-                }else{
+
+
+        calculate2.setOnClickListener(click2 -> {
+            if (!TextUtils.isEmpty(edtCorriente.getText().toString())) {
+                if (!TextUtils.isEmpty(edtVoltaje.getText().toString())) {
+                    txtResult2.setText("P2: " + stof(edtCorriente.getText().toString()) * stof(edtVoltaje.getText().toString()));
+                } else {
                     Toast.makeText(getActivity().getApplicationContext(), "Requiere Voltaje", Toast.LENGTH_SHORT).show();
                 }
-            }else{
+            } else {
                 Toast.makeText(getActivity().getApplicationContext(), "Requiere Corriente", Toast.LENGTH_SHORT).show();
             }
         });
-
-
         return root;
     }
 
-    private float stof(String value){
+    private float stof(String value) {
         return Float.parseFloat(value);
     }
 

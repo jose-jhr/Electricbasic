@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.color_base));
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.color_base));
 
         //option adapter
-        optionsAdapter = new OptAdapter(this,dataOptions.textOpt(),dataOptions.numberOpt());
+        optionsAdapter = new OptAdapter(this, dataOptions.textOpt(), dataOptions.numberOpt());
 
         //rotate logo
         rotateLogo();
@@ -61,35 +61,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.gridViewSelect.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i){
-                    case 0:startActivities(new Intent[]{new
-                            Intent(getApplicationContext(), ConceptosBasicos.class)});
-                            break;
-                    case 1:startActivity(new Intent(getApplicationContext(),
-                            InstalacionesElectrica.class));
-                            break;
+                switch (i) {
+                    case 0:
+                        startActivities(new Intent[]{new Intent(getApplicationContext(), ConceptosBasicos.class)});
+                        break;
+                    case 1:
+                        startActivity(new Intent(getApplicationContext(), InstalacionesElectrica.class));
+                        break;
                     case 2:
                         alertSelectView();
-                            break;
+                        break;
 
-                    case 3:startActivities(new Intent[]{PdfViewerActivity.Companion.launchPdfFromPath(
-                            getApplicationContext(),
-                            "medicionparametros.pdf",
-                            "Medicion de parametros electricos",
-                            "assets",
-                            false,
-                            true
-                    )});
-                            break;
+                    case 3:
+                        startActivities(new Intent[]{PdfViewerActivity.Companion.launchPdfFromPath(getApplicationContext(), "medicionparametros.pdf", "Medicion de parametros electricos", "assets", false, true)});
+                        break;
 
-                    case 4:startActivities(new Intent[]{PdfViewerActivity.Companion.launchPdfFromPath(
-                            getApplicationContext(),
-                            "fotovoltaico.pdf",
-                            "Medicion de parametros electricos",
-                            "assets",
-                            false,
-                            true
-                    )});
+                    case 4:
+                        startActivities(new Intent[]{PdfViewerActivity.Companion.launchPdfFromPath(getApplicationContext(), "fotovoltaico.pdf", "Medicion de parametros electricos", "assets", false, true)});
                         break;
 
                     case 5:
@@ -118,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnDocument.setOnClickListener(view -> {
             dialog.dismiss();
-            calculateDocumentOpen("practicas.pdf","practicas");
+            calculateDocumentOpen("practicas.pdf", "practicas");
         });
 
         dialog.show();
@@ -130,7 +118,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dialog.setTitle("Calculator");
         Button btnCalculadora = dialog.findViewById(R.id.btnCalculadora);
         Button btnDocument = dialog.findViewById(R.id.btnDocument);
-
 
         btnCalculadora.setOnClickListener(view -> {
             dialog.dismiss();
@@ -151,15 +138,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /**
      * open document calculate
      */
-    private void calculateDocumentOpen(String path,String tittle){
-        startActivities(new Intent[]{PdfViewerActivity.Companion.launchPdfFromPath(
-                getApplicationContext(),
-                path,
-                tittle,
-                "assets",
-                false,
-                true
-        )});
+    private void calculateDocumentOpen(String path, String tittle) {
+        startActivities(new Intent[]{PdfViewerActivity.Companion.launchPdfFromPath(getApplicationContext(), path, tittle, "assets", false, true)});
     }
 
 
@@ -168,14 +148,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void rotateLogo() {
         //init objecti animation
-        rotateView = new RotateView(this,binding.imgLogo);
+        rotateView = new RotateView(this, binding.imgLogo);
         rotateView.rotateView();
     }
 
 
     @Override
     public void onClick(View view) {
-        if (binding.imgLogo == view){
+        if (binding.imgLogo == view) {
             rotateView.rotateView();
         }
     }

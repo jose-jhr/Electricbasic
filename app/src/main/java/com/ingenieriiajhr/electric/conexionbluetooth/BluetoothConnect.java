@@ -31,9 +31,10 @@ import java.util.List;
 
 public class BluetoothConnect extends AppCompatActivity {
     BluJhr blue;
-    TextView terminal;
+    TextView terminal,dispositivos;
     Switch switch_intervalometro;
-    Button btn_desconectar,btn_conectar;
+    Button btn_desconectar,btn_conectar,btn_clear;
+
 
     ArrayList<String> listDevice = new ArrayList<>();
 
@@ -83,6 +84,13 @@ public class BluetoothConnect extends AppCompatActivity {
             listenerFunctionRx(alert,listDevice.get(position));
         });
 
+        btn_clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                terminal.setText("");
+            }
+        });
+
     }
 
     private void listenerFunctionRx(AlertDialog alert, String s) {
@@ -90,11 +98,14 @@ public class BluetoothConnect extends AppCompatActivity {
             switch (connected){
                 case True:
                     Toast.makeText(this, "Conectado a "+s, Toast.LENGTH_SHORT).show();
+                    dispositivos.setText("Conectado a : "+s.substring(0,s.length()-17));
+                    printConsole("Bienvenido a Electribasic");
                     alert.dismiss();
                     rxReceive();
                     break;
                 case Disconnect:
                     Toast.makeText(this, "Desconectado", Toast.LENGTH_SHORT).show();
+                    dispositivos.setText("No conectado");
                     break;
                 case Pending:
                     Toast.makeText(this, "Conectando...", Toast.LENGTH_SHORT).show();
@@ -109,9 +120,18 @@ public class BluetoothConnect extends AppCompatActivity {
     private void rxReceive() {
         blue.loadDateRx(s -> {
             if (switch_intervalometro.isChecked()) {
-                terminal.setText(terminal.getText() + s + "\n");
+                if (s.equals("3")){
+                    printConsole("Práctica no conectada: revise la alimentación del módulo: revise la conexión BT, reinicie en caso de fallo la conexión");
+                }
+                if (s.equals("2")){
+                    printConsole("Práctica bien conectada");
+                }
             }
         });
+    }
+
+    private void printConsole(String message) {
+        terminal.setText(terminal.getText() + message + "\n");
     }
 
     private void barColorStatus() {
@@ -125,6 +145,8 @@ public class BluetoothConnect extends AppCompatActivity {
         switch_intervalometro = findViewById(R.id.switch_intervalometro);
         btn_desconectar = findViewById(R.id.btn_desconectar);
         btn_conectar = findViewById(R.id.btn_conectar);
+        dispositivos = findViewById(R.id.txt_dispositivos);
+        btn_clear = findViewById(R.id.clear);
     }
 
 

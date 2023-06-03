@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 public class DataConceptosBasicos {
 
-    public DataConceptosBasicos(){
+    public DataConceptosBasicos() {
 
     }
 
-    public ArrayList<String> textOpt(){
+    public ArrayList<String> textOpt() {
         ArrayList<String> options = new ArrayList<String>();
         options.add("Ley de ohm");
         options.add("Fuentes de energía");
@@ -19,7 +19,7 @@ public class DataConceptosBasicos {
         return options;
     }
 
-    public ArrayList<Integer> numberOpt(){
+    public ArrayList<Integer> numberOpt() {
         ArrayList<Integer> options = new ArrayList<>();
         options.add(R.mipmap.leyohm);
         options.add(R.mipmap.fuentesenergia);
@@ -28,7 +28,7 @@ public class DataConceptosBasicos {
         return options;
     }
 
-    public ArrayList<String> namePdf(){
+    public ArrayList<String> namePdf() {
         ArrayList<String> namePdfs = new ArrayList<>();
         namePdfs.add("leyohm.pdf");
         namePdfs.add("fuentedeenergia.pdf");
@@ -36,8 +36,6 @@ public class DataConceptosBasicos {
         namePdfs.add("norma.pdf");
         return namePdfs;
     }
-
-
 
 
 }

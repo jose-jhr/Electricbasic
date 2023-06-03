@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 public class DataOptions {
 
-    public DataOptions(){
+    public DataOptions() {
 
     }
 
-    public ArrayList<String> textOpt(){
+    public ArrayList<String> textOpt() {
         ArrayList<String> options = new ArrayList<String>();
         options.add("Conceptos básicos");
         options.add("Instalaciones eléctricas");
@@ -21,7 +21,7 @@ public class DataOptions {
         return options;
     }
 
-    public ArrayList<Integer> numberOpt(){
+    public ArrayList<Integer> numberOpt() {
         ArrayList<Integer> options = new ArrayList<>();
         options.add(R.mipmap.conseptos);
         options.add(R.mipmap.house);
