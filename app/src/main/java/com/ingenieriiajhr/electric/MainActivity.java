@@ -73,11 +73,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
 
                     case 3:
-                        startActivities(new Intent[]{PdfViewerActivity.Companion.launchPdfFromPath(getApplicationContext(), "medicionparametros.pdf", "Medicion de parametros electricos", "assets", false, true)});
+                        startActivities(new Intent[]{PdfViewerActivity.Companion.launchPdfFromPath(getApplicationContext(), "medicionparametros.pdf", "Medición de parámetros eléctricos", "assets", false, true)});
                         break;
 
                     case 4:
-                        startActivities(new Intent[]{PdfViewerActivity.Companion.launchPdfFromPath(getApplicationContext(), "fotovoltaico.pdf", "Medicion de parametros electricos", "assets", false, true)});
+                        startActivities(new Intent[]{PdfViewerActivity.Companion.launchPdfFromPath(getApplicationContext(), "fotovoltaico.pdf", "Sistema fotovoltaico", "assets", false, true)});
                         break;
 
                     case 5:
@@ -86,12 +86,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
+
+        binding.btnInfo.setOnClickListener(view -> {
+            startActivities(new Intent[]{PdfViewerActivity.Companion.launchPdfFromPath(getApplicationContext(),"acercade.pdf","Acerca de ElectriBasic","assets",false,true)});
+        });
+
+
     }
 
     private void alertSelectPractic() {
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.select_calculate);
-        dialog.setTitle("Practicas");
+        dialog.setTitle("Prácticas");
         Button btnCalculadora = dialog.findViewById(R.id.btnCalculadora);
         Button btnDocument = dialog.findViewById(R.id.btnDocument);
 
@@ -106,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnDocument.setOnClickListener(view -> {
             dialog.dismiss();
-            calculateDocumentOpen("practicas.pdf", "practicas");
+            calculateDocumentOpen("practicas.pdf", "prácticas");
         });
 
         dialog.show();

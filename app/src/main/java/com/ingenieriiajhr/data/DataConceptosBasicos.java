@@ -15,7 +15,7 @@ public class DataConceptosBasicos {
         options.add("Ley de ohm");
         options.add("Fuentes de energía");
         options.add("Circuito eléctrico");
-        options.add("Norma oficial mexicana NOM-001");
+        options.add("Norma Oficial Mexicana NOM-001 SEDE-2012");
         return options;
     }
 

@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">ElectricBasic</string>
+    <string name="app_name">ElectriBasic</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="estatus_arduino">Conexión a módulo</string>
+    <string name="ley_de_ohm">Ley de Ohm</string>
+    <string name="corriente_nominal">Corriente nominal</string>
+    <string name="corriente_trif_sica">Corriente trifásica</string>
+    <string name="conversi_n_de_potencia">Conversión de potencia</string>
 </resources>

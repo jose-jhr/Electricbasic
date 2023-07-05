@@ -77,7 +77,7 @@
         android:id="@+id/switch_intervalometro"
         android:checked="true"
         android:textStyle="bold"
-        android:text="Recibir informacion"></Switch>
+        android:text="Recibir información"></Switch>
 
 
     <TextView
